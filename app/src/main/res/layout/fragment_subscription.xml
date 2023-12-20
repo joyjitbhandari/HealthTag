@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:context=".view.SplashActivity">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/gray_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="start"
+                android:text="@string/skip"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/_444343"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/rounded_rect_bg_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/iv_back"
+                app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+            <TextView
+                android:id="@+id/tv_subscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/outfit_medium"
+                android:gravity="start"
+                android:text="@string/subscription"
+                android:textColor="@color/black"
+                android:textSize="29sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                android:clipToPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_subscription"
+                app:layout_constraintBottom_toTopOf="@id/indicator"/>
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="8dp"
+                app:ci_drawable="@drawable/pager_indicator_red"
+                app:ci_drawable_unselected="@drawable/pager_indicator_unselected"
+                app:ci_height="12dp"
+                app:ci_animator="@anim/indicator_no_scale"
+                app:ci_margin="6dp"
+                app:ci_width="12dp"/>
+
+            <!--<View
+                android:layout_width="22dp"
+                android:layout_height="0dp"
+                android:background="#80FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view_pager" />
+
+            <View
+                android:layout_width="22dp"
+                android:layout_height="0dp"
+                android:background="#80FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view_pager" />
+-->
+            <TextView
+                android:id="@+id/btn_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_bg_red"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/text_continue"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/outfit_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp">
+
+    <ImageView
+        android:id="@+id/iv_ticket"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_user"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ticket_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:gravity="start"
+        android:layout_marginStart="10dp"
+        android:text="Ticket title goes here.."
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/iv_ticket"
+        app:layout_constraintTop_toTopOf="@id/iv_ticket" />
+
+    <TextView
+        android:id="@+id/tv_ticket_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="Lorem Ipsum is simply dummy..."
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_ticket_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_ticket_title" />
+
+    <TextView
+        android:id="@+id/tv_ticket_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="Ticket ID : 321545"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_ticket_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_ticket_desc" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="3:58PM"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_ticket_title" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="Solved"
+        android:textColor="@color/green"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/baseline_check_circle_24"
+        app:layout_constraintEnd_toStartOf="@id/tv_status"
+        app:layout_constraintTop_toTopOf="@id/tv_status" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/_E8E8E8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_ticket_id"
+        app:layout_constraintTop_toBottomOf="@id/tv_ticket_id"
+        android:layout_marginTop="19dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

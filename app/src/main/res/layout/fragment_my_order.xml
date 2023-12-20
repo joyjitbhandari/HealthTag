@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".view.SplashActivity">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gray_back_arrow"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="start"
+                android:text="@string/my_order"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/_444343"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+            <TextView
+                android:id="@+id/tv_sp_category"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_rect_bg_f8f9fb_f3f3f5_border"
+                android:padding="12dp"
+                android:hint="All"
+                android:layout_marginStart="16dp"
+                android:visibility="visible"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_medium"
+                android:drawablePadding="5dp"
+                app:drawableEndCompat="@drawable/ic_arrow_down_a9a9ab"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_sp_month"
+                app:layout_constraintTop_toBottomOf="@id/tv_order" />
+
+            <Spinner
+                android:id="@+id/sp_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_sp_category"
+                app:layout_constraintEnd_toEndOf="@id/tv_sp_category"
+                app:layout_constraintStart_toStartOf="@id/tv_sp_category"
+                app:layout_constraintTop_toTopOf="@+id/tv_sp_category" />
+
+            <TextView
+                android:id="@+id/tv_sp_month"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_bg_f8f9fb_f3f3f5_border"
+                android:paddingVertical="12dp"
+                android:hint="January"
+                android:visibility="visible"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:drawablePadding="5dp"
+                app:drawableEndCompat="@drawable/ic_arrow_down_a9a9ab"
+                app:layout_constraintStart_toEndOf="@id/tv_sp_category"
+                app:layout_constraintEnd_toStartOf="@id/tv_sp_year"
+                app:layout_constraintTop_toTopOf="@id/tv_sp_category" />
+
+            <Spinner
+                android:id="@+id/sp_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="@id/tv_sp_month"
+                app:layout_constraintEnd_toEndOf="@id/tv_sp_month"
+                app:layout_constraintTop_toTopOf="@id/tv_sp_month"
+                app:layout_constraintBottom_toBottomOf="@id/tv_sp_month"
+                />
+
+            <TextView
+                android:id="@+id/tv_sp_year"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_bg_f8f9fb_f3f3f5_border"
+                android:paddingVertical="12dp"
+                android:hint="2022"
+                android:visibility="visible"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_medium"
+                android:drawablePadding="5dp"
+                app:drawableEndCompat="@drawable/ic_arrow_down_a9a9ab"
+                app:layout_constraintStart_toEndOf="@id/tv_sp_month"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_sp_month" />
+
+            <Spinner
+                android:id="@+id/sp_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/tv_sp_year"
+                app:layout_constraintEnd_toEndOf="@id/tv_sp_year"
+                app:layout_constraintStart_toStartOf="@id/tv_sp_year"
+                app:layout_constraintTop_toTopOf="@id/tv_sp_year" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/adapter_order_item"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sp_category"/>
+
+            <TextView
+                android:id="@+id/txtNoData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="center"
+                android:text="No Data"
+                android:visibility="gone"
+                android:textColor="@color/_444343"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sp_category"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

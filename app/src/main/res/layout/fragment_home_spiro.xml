@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragHome_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragHome_statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragHome_text_deviceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fragHome_text_searchInProgress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Search in progress..."
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragHome_button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="20dp"
+        android:text="Search devices" />
+
+    <Button
+        android:id="@+id/fragHome_button_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="20dp"
+        android:text="Disconnect" />
+
+
+    <Button
+        android:id="@+id/btnPef"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="20dp"
+        android:text="PefFev1" />
+
+    <Spinner
+        android:id="@+id/header_spinner_turbine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:visibility="invisible"/>
+
+</LinearLayout>
+</layout>

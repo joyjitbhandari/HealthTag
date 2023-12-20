@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SplashActivity"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gray_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_code"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"/>
+
+    <LinearLayout
+        android:id="@+id/ll_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/otpDigit1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="@font/outfit_regular"
+            android:background="@drawable/edittext_rounded"
+            android:padding="10dp"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@+id/otpDigit2"/>
+
+        <EditText
+            android:id="@+id/otpDigit2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="30sp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/edittext_rounded"
+            android:padding="10dp"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@+id/otpDigit3"/>
+
+        <EditText
+            android:id="@+id/otpDigit3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="@font/outfit_regular"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/edittext_rounded"
+            android:padding="10dp"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@+id/otpDigit4"/>
+
+        <EditText
+            android:id="@+id/otpDigit4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="@font/outfit_regular"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/edittext_rounded"
+            android:padding="10dp"
+            android:imeOptions="actionDone"
+            android:nextFocusDown="@null"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_resend"
+        android:textSize="16sp"
+        android:fontFamily="@font/outfit_regular"
+        app:layout_constraintTop_toBottomOf="@id/ll_otp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="72dp"
+        android:textColor="@color/black"
+        android:text="@string/resend_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="#F5F3FF">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_bp" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                android:text="00"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:fontFamily="@font/outfit_bold"/>
+            <TextView
+                android:id="@+id/tv_measure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_count"
+                app:layout_constraintBottom_toBottomOf="@id/tv_count"
+                android:text="mmHg"
+                android:textColor="@color/black"
+                android:layout_marginBottom="9dp"
+                android:layout_marginStart="2dp"
+                android:textSize="13sp"
+                android:fontFamily="@font/outfit_semibold"/>
+
+            <TextView
+                android:id="@+id/tv_report_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_count"
+                android:text="BloodPressure"
+                android:textColor="#5E5497"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:fontFamily="@font/outfit_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_family_member"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_family"
+        android:padding="16dp"
+        app:tint="@color/white"
+        android:background="@drawable/circle_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:gravity="start"
+        android:text="John Doe"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/iv_family_member"
+        app:layout_constraintTop_toTopOf="@id/iv_family_member" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="15 Street, Opp. Times Square, NY, USA"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="Phone Number: 3215456786"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="Email ID: john@gmail.com"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+    <TextView
+        android:id="@+id/tv_relation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        android:text="Relationship: Father"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/border_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_relation"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

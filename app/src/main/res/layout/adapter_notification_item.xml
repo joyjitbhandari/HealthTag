@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/red_10"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="32dp">
+
+    <ImageView
+        android:id="@+id/iv_notification"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:gravity="start"
+        android:layout_marginStart="20dp"
+        android:text="Lorem Ipsum is simply dummy\ntext of the printing"
+        android:textColor="@color/_444343"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/iv_notification"
+        app:layout_constraintTop_toTopOf="@id/iv_notification" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="start"
+        android:text="2 hours ago"
+        android:textColor="@color/_9D9D9D"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/_D6D8DB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        android:layout_marginTop="19dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            tools:context=".view.SplashActivity">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gray_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/splash_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+            <TextView
+                android:id="@+id/tv_test_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="start"
+                android:text="@string/about"
+                android:textColor="@color/_444343"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+            <ImageView
+                android:id="@+id/iv_web"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_red"
+                android:src="@drawable/ic_web"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_test_desc" />
+
+            <TextView
+                android:id="@+id/tv_visit_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/visit_our_website"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_web"
+                app:layout_constraintStart_toEndOf="@id/iv_web"
+                app:layout_constraintTop_toTopOf="@id/iv_web" />
+
+            <ImageView
+                android:id="@+id/iv_email"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="24dp"
+                android:padding="10dp"
+                android:background="@drawable/circle_red"
+                android:src="@drawable/ic_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_web" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/email_us"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_email"
+                app:layout_constraintStart_toEndOf="@id/iv_email"
+                app:layout_constraintTop_toTopOf="@id/iv_email" />
+
+            <ImageView
+                android:id="@+id/iv_contact"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_red"
+                android:padding="10dp"
+                android:src="@drawable/ic_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_email" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="1-800-445-XXXX\nMon-Fri 9AM - 6PM EST"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_contact"
+                app:layout_constraintStart_toEndOf="@id/iv_contact"
+                app:layout_constraintTop_toTopOf="@id/iv_contact" />
+
+            <ImageView
+                android:id="@+id/iv_insta"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/instagram_red"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_contact"
+                />
+
+            <ImageView
+                android:id="@+id/iv_linked_in"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/linkedin_red"
+                app:layout_constraintStart_toEndOf="@id/iv_insta"
+                app:layout_constraintTop_toTopOf="@id/iv_insta"
+                 />
+
+            <ImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/facebook_red_circle"
+                app:layout_constraintStart_toEndOf="@id/iv_linked_in"
+                app:layout_constraintTop_toTopOf="@id/iv_linked_in"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/privacy_policy_underline"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_insta" />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/terms_condition_underline"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_privacy_policy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

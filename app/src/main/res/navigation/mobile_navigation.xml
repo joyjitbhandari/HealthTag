@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.flynaut.healthtag.view.spirometer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_spiro" />
+
+
+    <fragment
+        android:id="@+id/nav_peffev1"
+        android:name="com.flynaut.healthtag.view.spirometer.PefFev1Fragment"
+        android:label="peffev1"
+        tools:layout="@layout/fragment_peffev1" />
+
+
+</navigation>

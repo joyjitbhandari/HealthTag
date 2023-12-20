@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="10dp"
+        android:right="10dp"
+        android:drawable="@drawable/rounded_rect_bg_dark_gray_25dp"
+        android:state_selected="true"/>
+    <item
+        android:left="10dp"
+        android:right="10dp"
+        android:drawable="@drawable/rounded_rect_bg_gray_25dp"
+         />
+</selector>

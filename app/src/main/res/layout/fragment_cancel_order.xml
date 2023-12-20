@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_rounded_rect_bg_white"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        tools:context=".view.SplashActivity">
+
+        <TextView
+            android:id="@+id/tv_create_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:text="Are you sure you want to cancel\nthe order?"
+            android:textColor="@color/red"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="start"
+            android:maxLines="2"
+            android:text="Please enter the reason for cancellation"
+            android:textColor="@color/light_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_create_ticket" />
+
+        <EditText
+            android:id="@+id/et_reason"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="start"
+            android:hint="@string/write_here"
+            android:maxLines="5"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <TextView
+            android:id="@+id/btn_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/rounded_rect_white_border_red"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/no"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/btn_yes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_reason" />
+
+        <TextView
+            android:id="@+id/btn_yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/rounded_rect_bg_red"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_no"
+            app:layout_constraintTop_toBottomOf="@id/et_reason" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

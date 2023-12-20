@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "777525430473",
+    "firebase_url": "https://healthtag-504d7-default-rtdb.firebaseio.com",
+    "project_id": "healthtag-504d7",
+    "storage_bucket": "healthtag-504d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777525430473:android:491f43fea3a7f6c088e518",
+        "android_client_info": {
+          "package_name": "com.flynaut.healthtag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777525430473-o1aq0a4hur13j4m4das8mdo1d5lc7mpd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flynaut.healthtag",
+            "certificate_hash": "38d8ba9b31d30dc598fc9d7a397d51225b1d8d12"
+          }
+        },
+        {
+          "client_id": "777525430473-daplp35ubccja609k62mj4hrt4gfr6tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvJhVPk8odrDf9IE1aqXtq0o7zZHobwqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777525430473-daplp35ubccja609k62mj4hrt4gfr6tb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "777525430473-a20crhb18oabbufs6c3b5jqg344dj0ov.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.healthtag"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

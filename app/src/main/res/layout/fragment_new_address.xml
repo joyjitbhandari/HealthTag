@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SplashActivity"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gray_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="5dp"
+        android:background="@drawable/rounded_rect_bg_gray_40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user_grey"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:layout_marginStart="16dp"
+            android:padding="15dp"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
+            android:background="@drawable/circle_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New\nAddress"
+        android:textColor="@color/gray1"
+        android:textSize="40sp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"/>
+
+    <TextView
+        android:id="@+id/et_address_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_type"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="40dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:drawableEndCompat="@drawable/ic_down_profile"
+        android:drawablePadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+    <Spinner
+        android:id="@+id/sp_address_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/select_gender"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_address_type"
+        app:layout_constraintBottom_toBottomOf="@id/et_address_type"/>
+
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_address_type"/>
+
+    <EditText
+        android:id="@+id/et_address2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_line_optional"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_address"/>
+
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/city"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_address2"/>
+
+    <TextView
+        android:id="@+id/et_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/state"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:drawableEndCompat="@drawable/ic_down_profile"
+        android:drawablePadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_city"/>
+
+
+
+    <Spinner
+        android:id="@+id/sp_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_state"
+        app:layout_constraintBottom_toBottomOf="@id/et_state"/>
+
+
+    <EditText
+        android:id="@+id/et_zipcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/zipcode"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:maxLength="5"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_state"/>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_no"
+        android:textColorHint="@color/hint_black"
+        android:textSize="15sp"
+        android:fontFamily="@font/outfit_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_rect_bg_gray_border_25dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_zipcode"/>
+
+    <CheckBox
+        android:id="@+id/cb_default_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mark as Default Address"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/outfit_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_phone"/>
+
+    <TextView
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_rect_bg_red"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginTop="32dp"
+        android:text="Save Address"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/outfit_regular"
+        app:layout_constraintTop_toBottomOf="@id/cb_default_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

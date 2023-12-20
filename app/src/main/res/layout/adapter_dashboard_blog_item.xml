@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <cardDetails>-->
+
+<!--        <variable-->
+<!--            name="item"-->
+<!--            type="com.flynaut.healthtag.model.CategoryItem"/>-->
+
+<!--    </cardDetails>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cl_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="10dp">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/ic_blog"
+                android:scaleType="fitXY" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_image"
+                android:text="Lorem Ipsum is simply dummy text of the printing"
+                android:background="@color/white"
+                android:textColor="@color/dark_blue"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+                android:textSize="11sp"
+                android:fontFamily="@font/outfit_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
